@@ -15,13 +15,22 @@ const itemsName = [
     
 } */
 
+
+
+
+const menuItems = [...itemsName.map(item => {
+    console.log(item.name);
+    return `<li id="header-title" id="${item.id}">{item.name}</li>`;
+
+})]
+
 let mainHeaderBe = document.getElementById('main-header');
 mainHeaderBe.style.background = '#000';
-mainHeaderBe.innerHTML = '<h5>Logo</h5>';
 mainHeaderBe.style.borderBottom = 'solid 3px #ccc';
 mainHeaderBe.style.color = '#000';
 mainHeaderBe.style.fontWeight = 'bold';
 mainHeaderBe.style.textAlign = 'center';
+mainHeaderBe.style.fontSize = '12px';
 mainHeaderBe.style.textTransform = 'uppercase';
 
 /* Items header */
@@ -86,7 +95,8 @@ titles.forEach(title =>
     /* console.log('Distructuring', arrayTitles); */
     arrayTitles.forEach(title =>
     {
-        title.innerHTML = 'yellow';
+        title.style.backgroundColor = 'blue';
+        title.style.color = '#fff';
     });
 })
 
